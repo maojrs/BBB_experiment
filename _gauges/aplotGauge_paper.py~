@@ -2,9 +2,9 @@ from numpy import *
 import matplotlib.pyplot as plt
 
 # Load non-hydrophone gauge (change gauge number to change plot)
-t, p = loadtxt('a-pgauge2_non.dat', unpack=True, usecols=[0,1])
+t, p = loadtxt('a-pgauge3_non.dat', unpack=True, usecols=[0,1])
 # Load hydrophone gauge (change gauge number to change plot)
-th, ph = loadtxt('a-pgauge2_hyd.dat', unpack=True, usecols=[0,1])
+th, ph = loadtxt('a-pgauge3_hyd.dat', unpack=True, usecols=[0,1])
 
 #Set vapor pressure line
 xcav = [-3.0,300]

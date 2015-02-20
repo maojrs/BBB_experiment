@@ -138,6 +138,12 @@ def setplot(plotdata):
         y2 = [-zz for zz in y]
         plot(x,y,'k',linewidth=2.0)
         plot(x,y2,'k',linewidth=2.0)
+        #Plot hydrophone
+        xh = [-0.0055, -0.0055,0.0085]
+        yh = [0.0,0.0015,0.0015]
+        y2h = [-zz for zz in yh]
+        plot(xh,yh,'k')
+        plot(xh,y2h,'k')
         locator = ticker.MaxNLocator(20) # if you want no more than 10 contours 
         locator.create_dummy_axis()
         #For Pa
@@ -194,10 +200,16 @@ def setplot(plotdata):
         x = [zz - 0.0 for zz in x]
         y = [0.0, 0.0085, 0.0085, 0.0]
         y2 = [-zz for zz in y]
+        #Plot hydrophone
+        xh = [-0.0055, -0.0055,0.0085]
+        yh = [0.0,0.0015,0.0015]
+        y2h = [-zz for zz in yh]
         
         s1 = subplot2grid((5,16), (0,0), colspan=14, rowspan=3) # subplot(211)
         plot(x,y,'k',linewidth=2.0)
         plot(x,y2,'k',linewidth=2.0)
+        plot(xh,yh,'k')
+        plot(xh,y2h,'k')
         locator = ticker.MaxNLocator(20) # if you want no more than 10 contours 
         locator.create_dummy_axis()
         #For Pa

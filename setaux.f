@@ -32,19 +32,18 @@ c
                 aux(1,i,j) = gammawat
                 aux(2,i,j) = pinfwat
                 aux(3,i,j) = omewat
+                ! Add hydrophone
+                if ((xcell > -0.0055).and.(ycell.le.0.0015)) then
+                    aux(1,i,j) = gammaplas
+                    aux(2,i,j) = pinfplas
+                    aux(3,i,j) = omeplas
+                end if
             else 
                 ! Air parameters
                 aux(1,i,j) = gammagas
                 aux(2,i,j) = pinfgas
                 aux(3,i,j) = omegas
             end if
-            
-!             ! Add hydrophone
-!             if ((abs(xcell) .le. 0.005) .and. (j .eq. 1)) then
-!                 aux(1,i,j) = gammaplas
-!                 aux(2,i,j) = pinfplas
-!                 aux(3,i,j) = omeplas
-!             end if
           
         end do
       end do
