@@ -115,21 +115,21 @@ c
       close(unit=50)
       close(unit=60)
       
-      ! Load data into SILO format for SILO output
-      nx = mx 
-      ny = my 
-      fig = 4
-      gamma(:,:) = aux(1,1:mx,1:my) 
-      pinf(:,:) = aux(2,1:mx,1:my)
-      rho(:,:) = q(1,1:mx,1:my)
-      momx(:,:) = q(2,1:mx,1:my)
-      momy(:,:) = q(3,1:mx,1:my)
-      ene(:,:) = q(4,1:mx,1:my)
-      qi(:,:) = (gamma(:,:)-1.d0)*(ene(:,:) - 0.5*(momx(:,:)*momx(:,:)
-     & + momy(:,:)*momy(:,:))/rho(:,:)) - gamma(:,:)*pinf(:,:)
-      ! Call routine for silo output for 3D visualization  
-      CALL out_2_silo(qi,nx,ny,xlower,ylower,dx,dy,fig,iframe)
-      print*, 'Silo output: frame:', iframe
+!       ! Load data into SILO format for SILO output
+!       nx = mx 
+!       ny = my 
+!       fig = 4
+!       gamma(:,:) = aux(1,1:mx,1:my) 
+!       pinf(:,:) = aux(2,1:mx,1:my)
+!       rho(:,:) = q(1,1:mx,1:my)
+!       momx(:,:) = q(2,1:mx,1:my)
+!       momy(:,:) = q(3,1:mx,1:my)
+!       ene(:,:) = q(4,1:mx,1:my)
+!       qi(:,:) = (gamma(:,:)-1.d0)*(ene(:,:) - 0.5*(momx(:,:)*momx(:,:)
+!      & + momy(:,:)*momy(:,:))/rho(:,:)) - gamma(:,:)*pinf(:,:)
+!       ! Call routine for silo output for 3D visualization  
+!       CALL out_2_silo(qi,nx,ny,xlower,ylower,dx,dy,fig,iframe)
+!       print*, 'Silo output: frame:', iframe
 
       return
       end

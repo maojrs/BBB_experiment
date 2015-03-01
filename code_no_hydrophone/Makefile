@@ -25,7 +25,9 @@ RESTART ?= False                    # Should = clawdata.restart in setrun
 # Environment variable FC should be set to fortran compiler, e.g. gfortran
 
 # Compiler flags can be specified here or set as an environment variable
-FFLAGS ?= -I/usr/include -L/usr/lib -lsilo -lm -lstdc++
+FFLAGS ?= 
+# Flags to use for silo output
+#-I/usr/include -L/usr/lib -lsilo -lm -lstdc++
 
 # ---------------------------------
 # List of sources for this program:
@@ -42,7 +44,6 @@ SOURCES = \
   src2_exact.f \
   b4step2.f \
   out2_2D.f \
-  out2silo_2D.f90 \
   bc2.f \
   phi_exact_tamman.f90 \
   $(CLAW)/classic/src/2d/driver.f90 \
