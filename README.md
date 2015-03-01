@@ -18,17 +18,17 @@ The code is designed to work with the Clawpack 5 software. For more information 
 * Mac OS X
 
 ### How to run this code?
-**Install Clawpack 5.2.2:**
+1. **Install Clawpack 5.2.2:**
   * Go to: http://www.clawpack.org/installing.html#installation-instructions
   * Follow the download and installation intructions on the section: Install all Clawpack packages and Set environment variables.
   * Test your installation running an example for Classic Clawpack on the section: Testing your installation.
   * If your installation works, you already have python and gfortran installed.
 
-**Clone this repository to your local machine**
+2. **Clone this repository to your local machine**
 
     git clone https://github.com/maojrs/BBB_experiment.git
 
-**Run the code**
+3. **Run the code**
 Go to the folder code_no_hydrophone or code_hydrophone and run
 
     make .plots
@@ -48,43 +48,50 @@ The code will produce two new folders: _output and _plots. The first one contain
 Although changing the output might require getting more involved with the code, there are some simple tweaks that will allow the user to see different output. The main code files to edit are setrun.py and setplot.py
 
 **setrun.py**
+
 * Change domain boundaries:
 
-
+```
     clawdata.lower[0] = -0.03                 # xlower
     clawdata.upper[0] = 0.03                  # xupper
     clawdata.lower[1] = 0.000000e+00          # ylower
     clawdata.upper[1] = 0.020000e+00          # yupper
+```
 
 * Change grid size (from 600x60 to new values):
 
-
+```
     clawdata.num_cells[0] = 600
     clawdata.num_cells[1] = 60
+```
 
 * Change output times:
 
-
+```
     clawdata.num_output_times = 500 # number of output frames
     clawdata.tfinal = 0.0002 # final time in seconds
+```
 
 **setplot.py**
 
 * Change main properties of figure 7 (the one showing in the paper):
 
-
+```
+    # Pressure contour(2D) and pressure slice(1D) in one figure
     plotfigure = plotdata.new_plotfigure(name='Contour & Slice', figno=7)
-    plotaxes = plotfigure.new_plotaxes() # Set up for axes in this figure:
+    # Set up for axes in this figure:
+    plotaxes = plotfigure.new_plotaxes() 
     plotaxes.xlimits = [-3,3] 
     plotaxes.ylimits = [-20,30]
     plotaxes.title = 'Pressure'    
     plotaxes.afteraxes = MirrorPressurecontour_N_Pressureslice    
-    
+ ``` 
+ 
 * Change plotting output:
 
-
+```
     plotdata.printfigs = True                # print figures
     plotdata.print_format = 'png'            # file format
     plotdata.print_framenos =  [75,150,158,174,212,336] #list of frames to print. Use 'all' to print all #
     plotdata.print_fignos = 'all'            # list of figures to print
-
+```
