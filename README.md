@@ -26,12 +26,16 @@ The code is designed to work with the Clawpack 5 software. For more information 
 
 2. **Clone this repository to your local machine:**
 
+ ```
     git clone https://github.com/maojrs/BBB_experiment.git
+ ```
 
 3. **Run the code**
 Go to the folder: *code_no_hydrophone* or *code_hydrophone* and run in a terminal:
 
+ ```
     make .plots
+ ```
 
 The code will produce two new folders: _output and _plots. The first one contains all the output files, while the latter one contains the plots and interactive visualization apps. It will also produced 4 new gauge files saved in _code_(what_you_chose)/_gauges.
 
