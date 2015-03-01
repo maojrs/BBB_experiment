@@ -24,12 +24,12 @@ The code is designed to work with the Clawpack 5 software. For more information 
   * Test your installation running an example for Classic Clawpack on the section: Testing your installation.
   * If your installation works, you already have python and gfortran installed.
 
-2. **Clone this repository to your local machine**
+2. **Clone this repository to your local machine:**
 
     git clone https://github.com/maojrs/BBB_experiment.git
 
 3. **Run the code**
-Go to the folder code_no_hydrophone or code_hydrophone and run
+Go to the folder: *code_no_hydrophone* or *code_hydrophone* and run in a terminal:
 
     make .plots
 
