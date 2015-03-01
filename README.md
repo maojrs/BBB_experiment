@@ -38,9 +38,9 @@ The code will produce two new folders: _output and _plots. The first one contain
 ### Folder organization
 * **_gauges:** contains the four output gauges of both codes (no_hydrophone and hydrophone) as well as the plotting routine used to produce the figure in the paper. The output figures are also in this folder.
 
-* **_code_hydrophone:** contains the code to run the simulation with an hydrophone. The internal folders: _gauges, _initfiles and _plots_hydrophone, contain the output gauge data for this case, the initial condition data for the incoming shock wave and the plots produced included in the paper.
+* **code_hydrophone:** contains the code to run the simulation with an hydrophone. The internal folders: _gauges, _initfiles and _plots_hydrophone, contain the output gauge data for this case, the initial condition data for the incoming shock wave and the plots produced included in the paper.
 
-* **_code_no_hydrophone:**  contains the code to run the simulation without an hydrophone. The internal folders: _gauges, _initfiles and _plots_original, contain the output gauge data for this case, the initial condition data for the incoming shock wave and the plots produced included in the paper.
+* **code_no_hydrophone:**  contains the code to run the simulation without an hydrophone. The internal folders: _gauges, _initfiles and _plots_original, contain the output gauge data for this case, the initial condition data for the incoming shock wave and the plots produced included in the paper.
 
 * **invitro_data:** contains some of the experimental data, along a report on the experimental statistical analysis using SPSS software package. 
 
